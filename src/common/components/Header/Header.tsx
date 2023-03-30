@@ -85,7 +85,8 @@ const Header = () => {
         <ButtonImage
           onClick={() => handleDisplayMethodChange(DisplayMethod.CARDS)}
         >
-          <AppstoreOutlined data-testid="cards-button"
+          <AppstoreOutlined
+            data-testid="cards-button"
             style={
               displayMethod === DisplayMethod.CARDS
                 ? { color: tertiaryColor }
@@ -96,7 +97,8 @@ const Header = () => {
         <ButtonImage
           onClick={() => handleDisplayMethodChange(DisplayMethod.LIST)}
         >
-          <UnorderedListOutlined data-testid="list-button"
+          <UnorderedListOutlined
+            data-testid="list-button"
             style={
               displayMethod === DisplayMethod.LIST
                 ? { color: tertiaryColor }
@@ -139,13 +141,25 @@ const Header = () => {
         </Button>
       </RightSideHeader>
       <Modal
-        title="Basic Modal"
+        title="Coś się kończy, coś się zaczyna..."
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
+        footer={null}
         style={{ padding: "20px" }}
       >
-        <ModalBody>Na wstępie chciałbym</ModalBody>
+        <ModalBody>
+          Tworzenie przeze mnie projektu rekrutacyjnego dobiegło końca, czego
+          wynikiem jest ta oto aplikacja 😊, Jednocześnie największą frajdę oraz
+          największą trudność przysporzyły mi autorskie style CSS.W dużej mierze
+          postanowiłem stworzyć swój własny Layout. Oczywiście w pełni
+          wykorzystanie biblioteki UI pozwoliłoby może na lepszy efekt wizualny,
+          ale postanowiłem tutaj potrenować bardziej zaawansowany CSS, który
+          dość często jest pomijany na rzecz zagłębiania się w typescript (a tak
+          jest przynajmniej w moim przypadku). Wykorzystane zostały zatem takie
+          rzeczy jak Transform, Transition, grid, a także typowe jak flex czy
+          @media.
+        </ModalBody>
       </Modal>
       {contextHolder}
     </HeaderWrapper>
