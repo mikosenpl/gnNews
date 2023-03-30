@@ -18,6 +18,9 @@ This project was created using technologies such as React.js with Typescript, Re
 
 https://user-images.githubusercontent.com/76049970/228853806-7df83de6-2add-4581-ae47-4d20c63bca0c.mp4
 
+![image](https://user-images.githubusercontent.com/76049970/228859987-96aa7836-b558-4c07-a246-3f941c32d6cc.png)
+![image](https://user-images.githubusercontent.com/76049970/228860198-53a4701a-1045-4a98-bf9a-20cc9110d1be.png)
+
 #### Versions:
 Node : v18.12.0
 React : 18.2.0
