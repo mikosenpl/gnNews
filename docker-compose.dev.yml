@@ -13,7 +13,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./frontend:/home/node/ui
+      - ./:/home/node/ui
     networks:
       - client
     depends_on:
