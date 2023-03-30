@@ -58,7 +58,6 @@ const NewsList = () => {
   };
 
   const onPaginationChange: PaginationProps["onChange"] = (page) => {
-    console.log(page);
     setCurrentPage(page);
   };
 
