@@ -1,6 +1,70 @@
-# Getting Started with Create React App
+# Solution created by Michał Kikoła
+Recruitment task for the Frontend Developer position at gnStudio.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
+
+* [General info](#general-info)
+* [Start using Docker](#start-using-docker)
+* [Development server](#development-server)
+* [Structure](#structure)
+* [Configure files](#configure-files)
+* [Environment](#environment)
+* [Available Scripts](#available-scripts)
+
+## General info
+This project was created using technologies such as React.js with Typescript, Redux, Axios, Styled Component, React Query, React Testing Library and many more.
+
+#### Versions:
+Node : v18.12.0
+React : 18.2.0
+React-router-dom : 6.8.2
+
+## Start using Docker
+
+#### Run the developer server:
+
+```bash
+# start client and server
+docker compose -f docker-compose.dev.yml up
+# start client and server in background
+docker compose -f docker-compose.dev.yml up -d
+```
+
+## Structure
+
+```bash
+├───public - all public files, such as pictures and icons.
+├───src
+│   ├───assets - multimedia files such as photos, etc.
+│   ├───common
+│   │   ├───api - Configuration files, for example, for axios.
+│   │   ├───components - collection of components, i.e. functions that return a specific part of the application
+│   │   ├───enums - enumeration types
+│   │   ├───mocks - simulated, examples object
+│   │   ├───models - business logic representation
+│   │   ├───queries - backend queries
+│   │   ├───styles - css styles
+│   │   ├───store - store from redux
+│   │   └───utils - static methods
+│   └───pages - main application files, subpages
+```
+
+## Configure files
+
+* package.json - This file is the heart of any Node project. It records important metadata about a project which is required before publishing to NPM
+* tsconfig.json - Typescript configuration
+
+## Environment
+
+##### One file for environment variables:
+
+* `.env.development` - env.local variables when no .env.local file is created locally. For development
+
+##### Detailed environmental variables:: 
+
+* `REACT_APP_API_URL` - backend address
+* `REACT_APP_API_KEY` = api key for backend
+
 
 ## Available Scripts
 
