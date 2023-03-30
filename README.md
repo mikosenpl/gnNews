@@ -1,6 +1,8 @@
 # Solution created by Michał Kikoła
 Recruitment task for the Frontend Developer position at gnStudio.
 
+
+
 ## Table of contents
 
 * [General info](#general-info)
@@ -13,6 +15,11 @@ Recruitment task for the Frontend Developer position at gnStudio.
 
 ## General info
 This project was created using technologies such as React.js with Typescript, Redux, Axios, Styled Component, React Query, React Testing Library and many more.
+
+![image](https://user-images.githubusercontent.com/76049970/228861181-466fec8a-6331-46d3-818c-f5be82b8b0ef.png)
+![image](https://user-images.githubusercontent.com/76049970/228860198-53a4701a-1045-4a98-bf9a-20cc9110d1be.png)
+
+https://user-images.githubusercontent.com/76049970/228853806-7df83de6-2add-4581-ae47-4d20c63bca0c.mp4
 
 #### Versions:
 Node : v18.12.0
