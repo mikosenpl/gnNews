@@ -26,7 +26,12 @@ const Footer = () => {
     minute: '2-digit',
     second: '2-digit',
   });
-  const formattedDate = currentDate.toLocaleDateString([], { weekday: 'long' });
+  const formattedDate = currentDate.toLocaleDateString([], {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
 
   return (
     <FooterWrapper>

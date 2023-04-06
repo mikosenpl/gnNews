@@ -156,25 +156,14 @@ const Header = () => {
         </RightSideHeader>
       </HeaderWrapper>
       <Modal
-        title="Coś się kończy, coś się zaczyna..."
+        title={t('modalCheckItTitle')}
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
         footer={null}
         style={{ padding: '20px' }}
       >
-        <ModalBody>
-          Tworzenie przeze mnie projektu rekrutacyjnego dobiegło końca, czego
-          wynikiem jest ta oto aplikacja 😊, Jednocześnie największą frajdę oraz
-          największą trudność przysporzyły mi autorskie style CSS.W dużej mierze
-          postanowiłem stworzyć swój własny Layout. Oczywiście w pełni
-          wykorzystanie biblioteki UI pozwoliłoby może na lepszy efekt wizualny,
-          ale postanowiłem tutaj potrenować bardziej zaawansowany CSS, który
-          dość często jest pomijany na rzecz zagłębiania się w typescript (a tak
-          jest przynajmniej w moim przypadku). Wykorzystane zostały zatem takie
-          rzeczy jak Transform, Transition, grid, a także typowe jak flex czy
-          @media.
-        </ModalBody>
+        <ModalBody>{t('modalCheckItText')}</ModalBody>
       </Modal>
       {contextHolder}
     </>

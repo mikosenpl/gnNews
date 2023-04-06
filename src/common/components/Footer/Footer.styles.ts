@@ -11,7 +11,7 @@ export const FooterWrapper = styled.div`
   align-items: center;
   text-align: center;
   background-color: ${({ theme }) => theme.colors.secondary};
-  border-top: 2px solid ${({ theme }) => theme.colors.body};
+  border-top: 2px solid ${({ theme }) => theme.colors.tertiary};
   color: ${({ theme }) => theme.colors.body};
 
   ${({ theme }) => theme.mq.desktop} {
@@ -33,7 +33,7 @@ export const FooterCenter = styled.div`
   justify-content: space-between;
 
   ${({ theme }) => theme.mq.desktop} {
-    width: 40%;
+    width: 50%;
   }
 
   ${({ theme }) => theme.mq.smartphone} {
@@ -55,10 +55,8 @@ export const FooterRight = styled.div`
 `;
 
 export const FooterText = styled(Paragraph)`
-  padding: 10px;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.body};
-
   ${({ theme }) => theme.mq.desktop} {
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
@@ -69,9 +67,9 @@ export const FooterText = styled(Paragraph)`
 `;
 
 export const CounterNewsText = styled(Paragraph)`
-  padding: 5px 15px 0 0;
+  padding: 0.3rem 4rem 0 0;
   text-align: right;
   font-weight: 900;
   color: ${({ theme }) => theme.colors.tertiary};
-  font-size: ${({ theme }) => theme.fontSize.l};
+  font-size: ${({ theme }) => theme.fontSize.xl};
 `;

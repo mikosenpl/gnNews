@@ -8,11 +8,11 @@ export const lightTheme: DefaultTheme = {
     body: '#EFF1E9',
   },
   fontSize: {
-    xxl: '40px',
-    xl: '24px',
-    l: '17px',
-    m: '12px',
-    s: '11px',
+    xxl: '2.5rem',
+    xl: '1.5rem',
+    l: '1rem',
+    m: '0.75rem',
+    s: '0.68rem',
   },
   mq: {
     smartphone: '@media only screen and (max-width: 767px)',
@@ -33,11 +33,11 @@ export const darkTheme: DefaultTheme = {
     body: '#293B4C',
   },
   fontSize: {
-    xxl: '40px',
-    xl: '24px',
-    l: '17px',
-    m: '12px',
-    s: '11px',
+    xxl: '2.5rem',
+    xl: '1.5rem',
+    l: '1rem',
+    m: '0.75rem',
+    s: '0.68rem',
   },
   mq: {
     smartphone: '@media only screen and (max-width: 767px)',

@@ -16,7 +16,7 @@ export const MainContentWrapper = styled.div`
   ${({ theme }) => theme.mq.smartphone} {
     grid-row: 3 / 4;
     grid-column: 1 / 1;
-    padding: 15px;
+    padding: 1rem;
   }
 `;
 

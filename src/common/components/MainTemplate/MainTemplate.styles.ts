@@ -10,12 +10,12 @@ export const MainTemplateWrapper = styled.div`
   display: grid;
 
   ${({ theme }) => theme.mq.desktop} {
-    grid-template-rows: 100px 1fr 70px;
+    grid-template-rows: 6.25rem 1fr 4.4rem;
     grid-template-columns: 300px 1fr;
   }
 
   ${({ theme }) => theme.mq.smartphone} {
-    grid-template-rows: 100px 40px 1fr 70px;
+    grid-template-rows: 6.25rem 2.5rem 1fr 4.4rem;
     grid-template-columns: 1fr;
   }
 `;

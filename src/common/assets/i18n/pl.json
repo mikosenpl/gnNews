@@ -3,6 +3,8 @@
   "changeDisplay": "Zmieniono sposób wyświetlania wiadomości.",
   "changeLangaugeButton": "Zmień język",
   "page": "na stronę",
+  "modalCheckItTitle": "Coś się kończy, coś się zaczyna...",
+  "modalCheckItText": "Tworzenie przeze mnie projektu rekrutacyjnego dobiegło końca, co zaowocowało stworzeniem tej oto aplikacji 😊. Jednocześnie największą frajdę i największą trudność przysporzyły mi autorskie style CSS. W dużej mierze postanowiłem stworzyć swój własny układ. Oczywiście, pełne wykorzystanie biblioteki UI mogłoby przynieść lepszy efekt wizualny, ale zdecydowałem się tutaj na ćwiczenie bardziej zaawansowanego CSS, który dość często jest pomijany na rzecz zagłębiania się w TypeScript (tak jest przynajmniej w moim przypadku). Zastosowałem więc takie elementy jak Transform, Transition, Grid, a także bardziej typowe jak Flex czy @media.",
   "country": {
     "poland": "Polska",
     "england": "Anglia",
