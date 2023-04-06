@@ -15,7 +15,7 @@ export const MainTemplateWrapper = styled.div`
   }
 
   ${({ theme }) => theme.mq.smartphone} {
-    grid-template-rows: 6.25rem 2.5rem 1fr 4.4rem;
+    grid-template-rows: 6.25rem 3rem 1fr 4.4rem;
     grid-template-columns: 1fr;
   }
 `;

@@ -34,5 +34,16 @@ export const PaginationWrapper = styled.div`
   height: auto;
   display: flex;
   padding: 2rem;
-  justify-content: space-between;
+
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 2rem;
+    justify-content: space-between;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: end;
+  }
 `;

@@ -81,6 +81,7 @@ export const ChangeCountryText = styled(Paragraph)`
 export const ChangeLanguageButton = styled(Button)`
   color: black;
   background-color: ${({ theme }) => theme.colors.tertiary};
+  margin: 0.5rem;
 `;
 
 export const ChangeLanguageMenu = styled(Drawer)`

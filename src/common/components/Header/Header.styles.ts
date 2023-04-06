@@ -52,7 +52,7 @@ export const ButtonImage = styled.div`
   height: 100%;
   margin: 0;
   text-align: center;
-  padding-top: 3px;
+  padding-top: 2px;
   border: 2px solid ${({ theme }) => theme.colors.body};
   color: ${({ theme }) => theme.colors.body};
 

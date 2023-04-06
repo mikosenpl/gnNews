@@ -62,14 +62,21 @@ export const FooterText = styled(Paragraph)`
   }
 
   ${({ theme }) => theme.mq.smartphone} {
-    font-size: ${({ theme }) => theme.fontSize.m};
+    font-size: ${({ theme }) => theme.fontSize.s};
   }
 `;
 
 export const CounterNewsText = styled(Paragraph)`
-  padding: 0.3rem 4rem 0 0;
-  text-align: right;
   font-weight: 900;
   color: ${({ theme }) => theme.colors.tertiary};
-  font-size: ${({ theme }) => theme.fontSize.xl};
+
+  ${({ theme }) => theme.mq.desktop} {
+    text-align: right;
+    padding: 0.3rem 4rem 0 0;
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
 `;
