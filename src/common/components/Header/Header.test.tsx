@@ -1,4 +1,4 @@
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, getByTestId } from '@testing-library/react';
 import Header from './Header';
 import { store } from '../../store/store';
 import i18n from '../../../i18n';

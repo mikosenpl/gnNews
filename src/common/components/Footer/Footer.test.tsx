@@ -16,11 +16,15 @@ describe('Footer component', () => {
     const formattedTime = currentDate.toLocaleTimeString([], {
       hour: '2-digit',
       minute: '2-digit',
+      second: '2-digit',
     });
     const formattedDate = currentDate.toLocaleDateString([], {
       weekday: 'long',
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric',
     });
-    const expectedText = `${formattedTime}, ${formattedDate}`;
+    const expectedText = `${formattedDate}, ${formattedTime}.`;
     expect(getByText(expectedText)).toBeInTheDocument();
   });
 
@@ -38,7 +42,7 @@ describe('Footer component', () => {
       store.dispatch(setDisplayTotalResults(totalResults));
       store.dispatch(setPaginationCurrentPage(perPageResults));
     });
-    const expectedText = `${perPageResults}/${totalResults}`;
+    const expectedText = `${perPageResults * 6}/${totalResults}`;
     expect(getByText(expectedText)).toBeInTheDocument();
   });
 });

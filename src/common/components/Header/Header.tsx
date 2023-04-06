@@ -84,7 +84,7 @@ const Header = () => {
   return (
     <>
       <HeaderWrapper>
-        <Link to={`/news`}>
+        <Link to={`/news`} data-test-id="logo-link">
           <Logo>gnNews</Logo>
         </Link>
         <Buttons>
@@ -149,6 +149,7 @@ const Header = () => {
           <Button
             type="default"
             onClick={showModal}
+            data-testid="check-in-modal-button"
             style={{ width: '100%', padding: 0 }}
           >
             {t('popup')}
@@ -157,6 +158,7 @@ const Header = () => {
       </HeaderWrapper>
       <Modal
         title={t('modalCheckItTitle')}
+        data-testid="check-in-modal"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}

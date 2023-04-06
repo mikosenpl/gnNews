@@ -47,4 +47,36 @@ describe('NewsCard component', () => {
 
     windowOpen.mockRestore();
   });
+
+  it('displays the correct publication time', () => {
+    const { getByText } = render(
+      <AppProviders>
+        <NewsCard article={testArticle} />
+      </AppProviders>
+    );
+    const date = new Date(testArticle.publishedAt ?? '');
+    const minute = date.getUTCMinutes();
+    const hour = date.getUTCHours().toString().padStart(2, '0');
+    const day = date.getUTCDate().toString().padStart(2, '0');
+    const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+    const year = date.getUTCFullYear();
+    const formattedDate = !isNaN(minute)
+      ? `, ${hour}:${minute} - ${day}.${month}.${year}`
+      : '';
+    expect(
+      getByText(testArticle.source.name + formattedDate)
+    ).toBeInTheDocument();
+  });
+
+  it('opens modal on click', () => {
+    const { getByAltText, getByLabelText } = render(
+      <AppProviders>
+        <NewsCard article={testArticle} />
+      </AppProviders>
+    );
+
+    fireEvent.click(getByAltText('image'));
+
+    expect(getByLabelText('Close')).toBeInTheDocument();
+  });
 });
