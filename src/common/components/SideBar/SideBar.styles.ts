@@ -1,5 +1,5 @@
-import { Button, Drawer, Typography } from "antd";
-import styled from "styled-components";
+import { Button, Drawer, Typography } from 'antd';
+import styled from 'styled-components';
 
 const { Paragraph } = Typography;
 
@@ -11,12 +11,12 @@ export const SideBarWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.body};
   border-right: 2px solid ${({ theme }) => theme.colors.body};
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     grid-row: 2 / 4;
     grid-column: 1 / 1;
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     grid-row: 2 / 3;
     grid-column: 1 / 1;
     justify-content: right;

@@ -1,0 +1,19 @@
+{
+  "popup": "Sprawdź to!",
+  "changeDisplay": "Zmieniono sposób wyświetlania wiadomości.",
+  "changeLangaugeButton": "Zmień język",
+  "page": "na stronę",
+  "country": {
+    "poland": "Polska",
+    "england": "Anglia",
+    "usa": "USA",
+    "germany": "Niemcy",
+    "italy": "Włochy",
+    "france": "Francja",
+    "czech": "Czechy",
+    "spain": "Hiszpania",
+    "norway": "Norwegia",
+    "ukraine": "Ukraina",
+    "turkey": "Turcja"
+  }
+}

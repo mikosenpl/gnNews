@@ -1,10 +1,10 @@
-import { LeftOutlined, RightOutlined } from "@ant-design/icons";
-import { useState } from "react";
-import ReactCountryFlag from "react-country-flag";
-import { useDispatch, useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
-import { Country } from "../../models/Country";
-import { setDisplayCountry } from "../../store";
+import { LeftOutlined, RightOutlined } from '@ant-design/icons';
+import { useState } from 'react';
+import ReactCountryFlag from 'react-country-flag';
+import { useDispatch, useSelector } from 'react-redux';
+import { useSearchParams } from 'react-router-dom';
+import { Country } from '../../models/Country';
+import { RootState } from '../../store/store';
 import {
   ChangeCountryText,
   ChangeLanguageButton,
@@ -15,11 +15,11 @@ import {
   NavigationItem,
   NavigationItemActive,
   SideBarWrapper,
-} from "./SideBar.styles";
-import MediaQuery from "react-responsive";
-import { useTranslation } from "react-i18next";
-import { CountryNews } from "../../constants/CountryNews";
-import { DisplayLanguage } from "../../enums/DisplayMethod";
+} from './SideBar.styles';
+import MediaQuery from 'react-responsive';
+import { useTranslation } from 'react-i18next';
+import { CountryNews } from '../../constants/CountryNews';
+import { setDisplayCountry } from '../../store/slices/display/displaySlice';
 
 const SideBar = () => {
   const [open, setOpen] = useState(false);
@@ -27,15 +27,15 @@ const SideBar = () => {
   const [isActive, setIsActive] = useState(false);
 
   const dispatch = useDispatch();
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const displayCountry: Country = useSelector(
-    (state: any) => state.display.country
+    (state: RootState) => state.display.country
   );
 
   const handleDisplayCountryChange = (country: Country) => {
     dispatch(setDisplayCountry(country));
-    searchParams.set("country", country.code);
+    searchParams.set('country', country.code);
     setSearchParams(searchParams);
   };
 
@@ -56,36 +56,28 @@ const SideBar = () => {
       <>
         {displayCountry.code === country.code ? (
           <NavigationItemActive>
-            <ChangeCountryText>
-              {i18n.language === DisplayLanguage.POLISH
-                ? country.labelPL
-                : country.labelEN}
-            </ChangeCountryText>
+            <ChangeCountryText>{t(country.label)}</ChangeCountryText>
             <CountryFlag>
               <ReactCountryFlag
                 countryCode={country.code}
                 svg
                 style={{
-                  width: "50px",
-                  height: "50px",
+                  width: '50px',
+                  height: '50px',
                 }}
               />
             </CountryFlag>
           </NavigationItemActive>
         ) : (
           <NavigationItem onClick={() => handleDisplayCountryChange(country)}>
-            <ChangeCountryText>
-              {i18n.language === DisplayLanguage.POLISH
-                ? country.labelPL
-                : country.labelEN}
-            </ChangeCountryText>
+            <ChangeCountryText>{t(country.label)}</ChangeCountryText>
             <CountryFlag>
               <ReactCountryFlag
                 countryCode={country.code}
                 svg
                 style={{
-                  width: "50px",
-                  height: "50px",
+                  width: '50px',
+                  height: '50px',
                 }}
               />
             </CountryFlag>
@@ -98,12 +90,12 @@ const SideBar = () => {
   return (
     <SideBarWrapper>
       <MediaQuery minWidth={768}>
-        <Navigation className={isActive ? "navigation--active" : ""}>
+        <Navigation className={isActive ? 'navigation--active' : ''}>
           {CountryNews.map((country: Country) => {
             return NavigationFlag(country);
           })}
         </Navigation>
-        <NavigationArrow className={isActive ? "navigation-arrow--active" : ""}>
+        <NavigationArrow className={isActive ? 'navigation-arrow--active' : ''}>
           {isActive ? (
             <LeftOutlined onClick={handleClick} data-testid="arrow-left" />
           ) : (
@@ -113,7 +105,7 @@ const SideBar = () => {
       </MediaQuery>
       <MediaQuery maxWidth={767}>
         <ChangeLanguageButton type="primary" onClick={showDrawer} style={{}}>
-          {t("changeLangaugeButton")}
+          {t('changeLangaugeButton')}
         </ChangeLanguageButton>
         <ChangeLanguageMenu placement="left" onClose={onClose} open={open}>
           {CountryNews.map((country: Country) => {

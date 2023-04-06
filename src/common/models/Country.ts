@@ -1,6 +1,4 @@
 export interface Country {
-  labelPL: string;
-  labelEN: string;
+  label: string;
   code: string;
 }
-

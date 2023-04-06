@@ -1,9 +1,9 @@
 export enum DisplayMethod {
-  LIST = "list",
-  CARDS = "cards",
+  LIST = 'list',
+  CARDS = 'cards',
 }
 
 export enum DisplayLanguage {
-  POLISH = "pl",
-  ENGLISH = "en",
+  POLISH = 'pl',
+  ENGLISH = 'en',
 }

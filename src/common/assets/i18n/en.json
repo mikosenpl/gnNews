@@ -1,0 +1,19 @@
+{
+  "popup": "Check it!",
+  "changeDisplay": "The display format for news has been changed.",
+  "changeLangaugeButton": "Change Language",
+  "page": "per page",
+  "country": {
+    "poland": "Poland",
+    "england": "England",
+    "usa": "USA",
+    "germany": "Germany",
+    "italy": "Italy",
+    "france": "France",
+    "czech": "Czech",
+    "spain": "Spain",
+    "norway": "Norway",
+    "ukraine": "Ukraine",
+    "turkey": "Turkey"
+  }
+}

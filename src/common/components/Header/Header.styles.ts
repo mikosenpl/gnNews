@@ -1,5 +1,5 @@
-import { Typography } from "antd";
-import styled from "styled-components";
+import { Typography } from 'antd';
+import styled from 'styled-components';
 
 const { Paragraph } = Typography;
 
@@ -23,12 +23,12 @@ export const Logo = styled(Paragraph)`
   margin-bottom: 0 !important;
   color: ${({ theme }) => theme.colors.tertiary};
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     padding-left: 20px;
     font-size: ${({ theme }) => theme.fontSize.xxl};
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     padding-left: 5px;
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
@@ -39,12 +39,12 @@ export const Buttons = styled.div`
   flex-direction: row;
   padding: 5px;
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     width: 150px;
   }
 
-  @media only screen and (max-width: 767px) {
-    width: 50px;
+  ${({ theme }) => theme.mq.smartphone} {
+    width: 120px;
   }
 `;
 
@@ -57,19 +57,26 @@ export const ButtonImage = styled.div`
   border: 2px solid ${({ theme }) => theme.colors.body};
   color: ${({ theme }) => theme.colors.body};
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     font-size: 40px;
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     font-size: 25px;
     padding: 5px;
   }
 `;
 
 export const RightSideHeader = styled.div`
-  width: 100px;
   height: 100%;
+
+  ${({ theme }) => theme.mq.desktop} {
+    width: 7rem;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    width: 5rem;
+  }
 `;
 
 export const Languages = styled.div`

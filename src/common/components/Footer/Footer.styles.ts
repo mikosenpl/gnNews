@@ -1,5 +1,5 @@
-import { Typography } from "antd";
-import styled from "styled-components";
+import { Typography } from 'antd';
+import styled from 'styled-components';
 
 const { Paragraph } = Typography;
 
@@ -14,13 +14,13 @@ export const FooterWrapper = styled.div`
   border-top: 2px solid ${({ theme }) => theme.colors.body};
   color: ${({ theme }) => theme.colors.body};
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     grid-row: 3 / 3;
     grid-column: 1 / 3;
     justify-content: flex-end;
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     grid-row: 4 / 5;
     grid-column: 1 / 1;
     justify-content: center;
@@ -32,11 +32,11 @@ export const FooterCenter = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     width: 40%;
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     width: 70%;
   }
 `;
@@ -45,11 +45,11 @@ export const FooterRight = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     width: 30%;
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     width: 30%;
   }
 `;
@@ -59,11 +59,11 @@ export const FooterText = styled(Paragraph)`
   font-weight: 500;
   color: ${({ theme }) => theme.colors.body};
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     font-size: ${({ theme }) => theme.fontSize.m};
   }
 `;

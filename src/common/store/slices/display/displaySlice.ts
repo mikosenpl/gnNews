@@ -1,27 +1,25 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
-import { CountryNews } from "../constants/CountryNews";
-import { DisplayLanguage, DisplayMethod } from "../enums/DisplayMethod";
-import { Country } from "../models/Country";
+import { createSlice } from '@reduxjs/toolkit';
+import { CountryNews } from '../../../constants/CountryNews';
+import { DisplayMethod, DisplayLanguage } from '../../../enums/DisplayMethod';
+import { Country } from '../../../models/Country';
 
 export interface DisplayState {
   method: DisplayMethod;
   country: Country;
   language: DisplayLanguage;
   totalResults: number;
-  perPageResults: number;
 }
 
-export const initialdisplayState: DisplayState = {
+export const initialDisplayState: DisplayState = {
   method: DisplayMethod.CARDS,
   country: CountryNews[2],
   language: DisplayLanguage.POLISH,
   totalResults: 0,
-  perPageResults: 4,
 };
 
 const displaySlice = createSlice({
-  name: "display",
-  initialState: initialdisplayState,
+  name: 'display',
+  initialState: initialDisplayState,
   reducers: {
     setDisplayMethod: (state, action) => {
       state.method = action.payload;
@@ -35,9 +33,6 @@ const displaySlice = createSlice({
     setDisplayTotalResults: (state, action) => {
       state.totalResults = action.payload;
     },
-    setDisplayPerPageResults: (state, action) => {
-      state.perPageResults = action.payload;
-    },
   },
 });
 
@@ -46,11 +41,6 @@ export const {
   setDisplayCountry,
   setDisplayLanguage,
   setDisplayTotalResults,
-  setDisplayPerPageResults,
 } = displaySlice.actions;
 
-export const store = configureStore({
-  reducer: {
-    display: displaySlice.reducer,
-  },
-});
+export default displaySlice.reducer;
