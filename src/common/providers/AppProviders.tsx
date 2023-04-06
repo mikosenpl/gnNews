@@ -1,12 +1,12 @@
-import "../../App.css";
-import { BrowserRouter as Router } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { Provider } from "react-redux";
-import { queryDefaultConfig } from "../api/queryConfig";
-import { GlobalStyle } from "../assets/styles/GlobalStyle";
-import { lightTheme } from "../assets/styles/theme";
-import { store } from "../store";
+import '../../App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { Provider } from 'react-redux';
+import { queryDefaultConfig } from '../api/queryConfig';
+import { GlobalStyle } from '../assets/styles/GlobalStyle';
+import { lightTheme } from '../assets/styles/theme';
+import { store } from '../store/store';
 
 interface AppProvidersProps {
   children: string | JSX.Element | JSX.Element[] | (() => JSX.Element);

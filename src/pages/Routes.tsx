@@ -1,5 +1,5 @@
-import { Navigate, Route, Routes } from "react-router";
-import NewsPage from "./NewsPage";
+import { Navigate, Route, Routes } from 'react-router';
+import NewsPage from './NewsPage';
 
 const Routing = () => {
   return (

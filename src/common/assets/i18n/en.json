@@ -1,0 +1,21 @@
+{
+  "popup": "Check it!",
+  "changeDisplay": "The display format for news has been changed.",
+  "changeLangaugeButton": "Change Language",
+  "page": "per page",
+  "modalCheckItTitle": "Something ends, something begins...",
+  "modalCheckItText": "The creation of my recruitment project has come to an end, resulting in this application 😊. At the same time, the most fun and the biggest difficulty were caused by my custom CSS styles. I largely decided to create my own layout. Of course, fully utilizing a UI library could have resulted in a better visual effect, but I chose to practice more advanced CSS, which is often overlooked in favor of diving into TypeScript (at least in my case). So, I used things like Transform, Transition, grid, as well as common ones like flex and @media.",
+  "country": {
+    "poland": "Poland",
+    "england": "England",
+    "usa": "USA",
+    "germany": "Germany",
+    "italy": "Italy",
+    "france": "France",
+    "czech": "Czech",
+    "spain": "Spain",
+    "norway": "Norway",
+    "ukraine": "Ukraine",
+    "turkey": "Turkey"
+  }
+}

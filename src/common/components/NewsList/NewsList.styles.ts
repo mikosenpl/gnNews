@@ -1,25 +1,49 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+export const MainContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: ${({ theme }) => theme.colors.body};
+
+  ${({ theme }) => theme.mq.desktop} {
+    grid-row: 2 / 2;
+    grid-column: 2 / 2;
+    padding: 3rem;
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    grid-row: 3 / 4;
+    grid-column: 1 / 1;
+    padding: 1rem;
+  }
+`;
 
 export const NewsListWrapper = styled.div`
   display: flex;
   width: 100%;
-  height: 100%;
+  height: auto;
   justify-content: space-between;
-  align-items: flex-end;
   flex-wrap: wrap;
-  background-color: ${({ theme }) => theme.colors.body};
+  gap: 2rem;
+`;
 
-  @media only screen and (min-width: 768px) {
-    grid-row: 2 / 2;
-    grid-column: 2 / 2;
-    padding: 25px 150px;
-    gap: 40px;
+export const PaginationWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 2rem;
+
+  ${({ theme }) => theme.mq.desktop} {
+    padding: 2rem;
+    justify-content: space-between;
   }
 
-  @media only screen and (max-width: 767px) {
-    grid-row: 3 / 4;
-    grid-column: 1 / 1;
-    padding: 15px;
-    gap: 20px;
+  ${({ theme }) => theme.mq.smartphone} {
+    padding: 1rem;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: end;
   }
 `;

@@ -16,10 +16,12 @@ Recruitment task for the Frontend Developer position at gnStudio.
 ## General info
 This project was created using technologies such as React.js with Typescript, Redux, Axios, Styled Component, React Query, React Testing Library and many more.
 
-![image](https://user-images.githubusercontent.com/76049970/228861181-466fec8a-6331-46d3-818c-f5be82b8b0ef.png)
-![image](https://user-images.githubusercontent.com/76049970/228860198-53a4701a-1045-4a98-bf9a-20cc9110d1be.png)
+![smarphone-nav](https://user-images.githubusercontent.com/76049970/230508101-d90682c6-837d-4d58-bf8a-620a013f2c2d.png)
+![smarphone-front](https://user-images.githubusercontent.com/76049970/230508106-812c4b9f-8675-42bc-83bc-de114bae1971.png)
+![smarphone-news](https://user-images.githubusercontent.com/76049970/230508114-0318e8e3-ddcf-44b6-b01d-b9631103f1bd.png)
+![smarphone-end](https://user-images.githubusercontent.com/76049970/230508120-aeb61855-05ed-474e-bf79-decb9b26b048.png)
 
-https://user-images.githubusercontent.com/76049970/228853806-7df83de6-2add-4581-ae47-4d20c63bca0c.mp4
+https://user-images.githubusercontent.com/76049970/230508134-e5227e28-67c8-4bd3-a3cd-309388d032a8.mp4
 
 #### Versions:
 Node : v18.12.0

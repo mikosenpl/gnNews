@@ -1,5 +1,5 @@
-import { Typography } from "antd";
-import styled from "styled-components";
+import { Typography } from 'antd';
+import styled from 'styled-components';
 
 const { Paragraph } = Typography;
 
@@ -11,16 +11,16 @@ export const FooterWrapper = styled.div`
   align-items: center;
   text-align: center;
   background-color: ${({ theme }) => theme.colors.secondary};
-  border-top: 2px solid ${({ theme }) => theme.colors.body};
+  border-top: 2px solid ${({ theme }) => theme.colors.tertiary};
   color: ${({ theme }) => theme.colors.body};
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     grid-row: 3 / 3;
     grid-column: 1 / 3;
     justify-content: flex-end;
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     grid-row: 4 / 5;
     grid-column: 1 / 1;
     justify-content: center;
@@ -32,11 +32,11 @@ export const FooterCenter = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media only screen and (min-width: 768px) {
-    width: 40%;
+  ${({ theme }) => theme.mq.desktop} {
+    width: 50%;
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     width: 70%;
   }
 `;
@@ -45,33 +45,38 @@ export const FooterRight = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     width: 30%;
   }
 
-  @media only screen and (max-width: 767px) {
+  ${({ theme }) => theme.mq.smartphone} {
     width: 30%;
   }
 `;
 
 export const FooterText = styled(Paragraph)`
-  padding: 10px;
   font-weight: 500;
   color: ${({ theme }) => theme.colors.body};
-
-  @media only screen and (min-width: 768px) {
+  ${({ theme }) => theme.mq.desktop} {
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
 
-  @media only screen and (max-width: 767px) {
-    font-size: ${({ theme }) => theme.fontSize.m};
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: ${({ theme }) => theme.fontSize.s};
   }
 `;
 
 export const CounterNewsText = styled(Paragraph)`
-  padding: 5px 15px 0 0;
-  text-align: right;
   font-weight: 900;
   color: ${({ theme }) => theme.colors.tertiary};
-  font-size: ${({ theme }) => theme.fontSize.l};
+
+  ${({ theme }) => theme.mq.desktop} {
+    text-align: right;
+    padding: 0.3rem 4rem 0 0;
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
+
+  ${({ theme }) => theme.mq.smartphone} {
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
 `;

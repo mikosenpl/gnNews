@@ -1,10 +1,11 @@
-import { EllipsisOutlined } from "@ant-design/icons";
-import { Card, Modal } from "antd";
-import { useState } from "react";
-import { useSelector } from "react-redux";
-import { DisplayMethod } from "../../enums/DisplayMethod";
-import { Article } from "../../models/News";
-import { CardNews, BottomCard, ListNews } from "./NewsCard.styles";
+import { EllipsisOutlined } from '@ant-design/icons';
+import { Card, Modal } from 'antd';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { DisplayMethod } from '../../enums/DisplayMethod';
+import { Article } from '../../models/News';
+import { CardNews, BottomCard, ListNews } from './NewsCard.styles';
+import { RootState } from '../../store/store';
 
 const { Meta } = Card;
 
@@ -13,7 +14,7 @@ interface NewsCardProps {
 }
 
 const NewsCard = (props: NewsCardProps) => {
-  const displayMethod = useSelector((state: any) => state.display.method);
+  const displayMethod = useSelector((state: RootState) => state.display.method);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const showModal = () => {
@@ -29,21 +30,23 @@ const NewsCard = (props: NewsCardProps) => {
   };
 
   const handleEllipsisClick = () => {
-    props.article.url
-      ? window.open(props.article.url, "_blank")
-      : window.open("", "_blank");
+    if (props.article.url) {
+      window.open(props.article.url, '_blank');
+    } else {
+      window.open('', '_blank');
+    }
   };
 
-  const date = new Date(props.article.publishedAt ?? "");
+  const date = new Date(props.article.publishedAt ?? '');
   const minute = date.getUTCMinutes();
-  const hour = date.getUTCHours().toString().padStart(2, "0");
-  const day = date.getUTCDate().toString().padStart(2, "0");
-  const month = (date.getUTCMonth() + 1).toString().padStart(2, "0");
+  const hour = date.getUTCHours().toString().padStart(2, '0');
+  const day = date.getUTCDate().toString().padStart(2, '0');
+  const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
   const year = date.getUTCFullYear();
 
   const formattedDate = !isNaN(minute)
     ? `, ${hour}:${minute} - ${day}.${month}.${year}`
-    : "";
+    : '';
 
   return (
     <>
@@ -51,7 +54,7 @@ const NewsCard = (props: NewsCardProps) => {
         <CardNews
           hoverable
           data-testid="card-news"
-          cover={<img alt={"image"} src={props.article.urlToImage ?? ""} />}
+          cover={<img alt={'image'} src={props.article.urlToImage ?? ''} />}
           onClick={showModal}
         >
           <Meta
@@ -74,18 +77,18 @@ const NewsCard = (props: NewsCardProps) => {
         onOk={handleOk}
         onCancel={handleCancel}
         bodyStyle={{ padding: 0 }}
-        width={"80vw"}
+        width={'80vw'}
         footer={null}
       >
         <Card
           hoverable
-          style={{ width: "80vw" }}
-          cover={<img alt={"image"} src={props.article.urlToImage ?? ""} />}
+          style={{ width: '80vw' }}
+          cover={<img alt={'image'} src={props.article.urlToImage ?? ''} />}
           actions={[
             <EllipsisOutlined
               key="ellipsis"
               data-testid="ellipsis-button"
-              style={{ fontSize: "50px" }}
+              style={{ fontSize: '50px' }}
               onClick={handleEllipsisClick}
             />,
           ]}
