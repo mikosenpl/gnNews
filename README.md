@@ -44,15 +44,17 @@ docker compose -f docker-compose.dev.yml up -d
 ```bash
 ├───public - all public files, such as pictures and icons.
 ├───src
-│   ├───assets - multimedia files such as photos, etc.
 │   ├───common
 │   │   ├───api - Configuration files, for example, for axios.
+│   │   ├───assets - multimedia files such as photos, translate resources etc.
+│   │   ├───├───styles - theme, and global styles for application
 │   │   ├───components - collection of components, i.e. functions that return a specific part of the application
+│   │   ├───constants - helpers, const types
 │   │   ├───enums - enumeration types
 │   │   ├───mocks - simulated, examples object
 │   │   ├───models - business logic representation
+│   │   ├───providers - context files
 │   │   ├───queries - backend queries
-│   │   ├───styles - css styles
 │   │   ├───store - store from redux
 │   │   └───utils - static methods
 │   └───pages - main application files, subpages
