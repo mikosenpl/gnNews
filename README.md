@@ -1,5 +1,5 @@
 # Solution created by Michał Kikoła
-Recruitment task for the Frontend Developer position at gnStudio.
+Web application with news from around the world.
 
 
 
